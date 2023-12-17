@@ -5,13 +5,10 @@
 
 body,
 html {
-  background-color: #080808;
+  background-color: #181818;
+
   color: whitesmoke;
   font-family: "Caveat", cursive;
   width: 100vw;
   overflow-x: hidden;
-}
-.mansory {
-  /*grid-template-rows: masonry;*/
-  grid-template-rows: 1fr auto;
 }

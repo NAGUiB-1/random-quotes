@@ -3,11 +3,11 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import gradient from "random-gradient";
 
 const QuoteBlock = ({ blockRef, data, id }) => {
-  let uuid = id ? id : Math.round(Math.random(100));
+  let uuid = id ? id : Math.round(Math.random() * 100);
   const bgGradient = gradient(uuid);
   return (
     <div
-      className="text-3xl md:text-5xl text-center relative  md:p-10 p-3 rounded-3xl h-fit max-w-[750px]"
+      className="text-3xl md:text-4xl text-center relative  md:p-8 p-3 rounded-3xl h-fit max-w-[750px]"
       data-aos="fade-left"
       style={{
         background: bgGradient,

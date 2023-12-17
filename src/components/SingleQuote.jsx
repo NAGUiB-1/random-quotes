@@ -9,9 +9,9 @@ import { useDispatch } from "react-redux";
 import { MdBookmarkAdded } from "react-icons/md";
 
 const SingleQuote = ({ data, id, handleRemoveFromBookmark }) => {
+  // ====================Handle Random Gradient ========//
   const bgGradient = gradient(id);
-
-  // ====================Handle Download Button ========
+  // ====================Handle Download Button ========//
   let ref = useRef(null);
   const onButtonClick = useCallback(() => {
     if (ref.current === null) {

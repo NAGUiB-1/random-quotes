@@ -14,7 +14,6 @@ const App = () => {
   return (
     <div className="container mx-auto">
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/saved-quotes" element={<SavedQuotes />} />
