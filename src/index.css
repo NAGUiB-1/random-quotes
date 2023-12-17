@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  background-color: #080808;
+  color: whitesmoke;
+  font-family: "Caveat", cursive;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.mansory {
+  /*grid-template-rows: masonry;*/
+  grid-template-rows: 1fr auto;
+}
