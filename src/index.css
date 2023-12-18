@@ -6,9 +6,16 @@
 body,
 html {
   background-color: #181818;
-
+  min-height: 100dvh;
   color: whitesmoke;
   font-family: "Caveat", cursive;
   width: 100vw;
   overflow-x: hidden;
+  background-image: url(/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#visual {
+  fill: red;
 }

@@ -71,7 +71,7 @@ const Home = () => {
   }, [quotes]);
 
   return (
-    <div className="h-[100svh] w-full flex justify-center items-center flex-col gap-4 pb-20 md:pb-0">
+    <div className="min-h-[calc(100svh-5rem)] mt-4 md:mt-20 w-full flex justify-center items-center flex-col gap-4 pb-20 md:pb-0 ">
       {/* Quote Component */}
       {loading ? (
         <HashLoader

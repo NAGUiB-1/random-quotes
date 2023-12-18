@@ -6,7 +6,8 @@ import { toPng } from "html-to-image";
 import { useRef } from "react";
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
-import { MdBookmarkAdded } from "react-icons/md";
+
+import { MdOutlineDeleteOutline } from "react-icons/md";
 
 const SingleQuote = ({ data, id, handleRemoveFromBookmark }) => {
   // ====================Handle Random Gradient ========//
@@ -50,12 +51,15 @@ const SingleQuote = ({ data, id, handleRemoveFromBookmark }) => {
       </div>
       <div className="absolute bottom-1 left-[calc(50%-44px)] flex gap-2">
         <button onClick={onButtonClick}>
-          <FiDownload size={40} />
+          <FiDownload
+            size={40}
+            className="hover:text-blue-500 transition-all cursor-pointer"
+          />
         </button>
-        <MdBookmarkAdded
+        <MdOutlineDeleteOutline
           onClick={() => handleRemoveFromBookmark(id)}
           size={40}
-          className="cursor-pointer"
+          className="hover:text-red-500 transition-all cursor-pointer"
         />
       </div>
     </div>

@@ -5,6 +5,8 @@ import { MdBookmarkAdd, MdBookmarkAdded } from "react-icons/md";
 import { TfiReload } from "react-icons/tfi";
 import QuoteBlock from "./QuoteBlock";
 
+let controlerStyle = "hover:text-blue-500  transition-all";
+
 const HomeSingleQuote = ({
   // ==================== get props from parent ============= //
   handleAddToBookmark,
@@ -38,16 +40,22 @@ const HomeSingleQuote = ({
         data={savedData?.content}
         id={savedData?.id}
       />
-      {/********************* controllers **********/}
-      <div className="flex gap-6 text-3xl">
+      {/********************* Controllers **********/}
+      <div className="flex gap-6 text-4xl">
         <button onClick={onButtonClick}>
-          <FiDownload />
+          <FiDownload className={controlerStyle} />
         </button>
-        <div className="cursor-pointer">
+        <div className="cursor-pointer ">
           {bookmarked ? (
-            <MdBookmarkAdded onClick={handleRemoveFromBookmark} />
+            <MdBookmarkAdded
+              onClick={handleRemoveFromBookmark}
+              className="hover:text-red-500 transition-all"
+            />
           ) : (
-            <MdBookmarkAdd onClick={handleAddToBookmark} />
+            <MdBookmarkAdd
+              onClick={handleAddToBookmark}
+              className={controlerStyle}
+            />
           )}
         </div>
         <div
@@ -56,7 +64,7 @@ const HomeSingleQuote = ({
             fetchData();
           }}
         >
-          <TfiReload />
+          <TfiReload className={controlerStyle} />
         </div>
       </div>
     </>
